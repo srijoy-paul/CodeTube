@@ -1,12 +1,18 @@
 import React from 'react'
-
+import { useDispatch } from 'react-redux'
+import { toggleMenu } from '../utils/appSlice';
 function Header() {
+    const dispatch = useDispatch();
+
+    const toogleMenuHandler = () => {
+        dispatch(toggleMenu());
+    }
     return (
         <div className="p-2 px-8 shadow-lg flex items-center gap-3 justify-between">
             {/* menu btn */}
             <div className='flex items-center gap-3'>
 
-                <img src="https://icon-icons.com/downloadimage.php?id=155296&root=2596/PNG/512/&file=hamburger_button_menu_icon_155296.png" className="h-6 cursor-pointer" alt="" />
+                <img src="https://icon-icons.com/downloadimage.php?id=155296&root=2596/PNG/512/&file=hamburger_button_menu_icon_155296.png" className="h-6 cursor-pointer" alt="" onClick={toogleMenuHandler} />
                 {/* logo */}
                 <img src="https://www.freeiconspng.com/uploads/youtube-logo-png-transparent-image-5.png" className='h-16 cursor-pointer' alt="" />
                 {/* searchbar */}
