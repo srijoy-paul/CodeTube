@@ -1,0 +1,22 @@
+export const topics = [
+    "TechReviews",
+    "Unboxing",
+    "Tutorials",
+    "TravelVlogs",
+    "Gaming",
+    "Fitness",
+    "Cooking",
+    "LifeHacks",
+    "Motivational",
+    "Educational",
+    "Music",
+    "Podcasts",
+    "Comedy Skits",
+    "Fashion",
+    "DIY Projects",
+    "Movies & TV Series",
+    "Science Experiments",
+    "Book Reviews",
+    "ASMR Videos",
+    "Lifestyle Vlogs"
+]
