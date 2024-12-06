@@ -18,7 +18,7 @@ function VideosSection() {
     return (
         <>
             <TopicsList />
-            <div className='p-2 flex flex-wrap gap-4'>
+            <div className='p-2 px-8 flex flex-wrap gap-4'>
                 {videos?.map(video => <VideoCard key={video.id} videoData={video} />)}
             </div>
         </>

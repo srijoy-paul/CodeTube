@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 function VideoCard({ videoData }) {
-    console.log("received videodata", videoData);
     const { contentDetails, id: videoId, snippet, statistics } = videoData;
     const { title, thumbnails, channelTitle, publishedAt } = snippet;
     const { url: videoImageUrl } = thumbnails.medium;

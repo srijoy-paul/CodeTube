@@ -15,7 +15,7 @@ function Header() {
 
                 <img src="https://icon-icons.com/downloadimage.php?id=155296&root=2596/PNG/512/&file=hamburger_button_menu_icon_155296.png" className="h-6 cursor-pointer" alt="" onClick={toogleMenuHandler} />
                 {/* logo */}
-                {/* <Link to="/"><img src="https://www.freeiconspng.com/uploads/youtube-logo-png-transparent-image-5.png" className='h-16 cursor-pointer' alt="" /></Link> */}
+                <img src="https://www.freeiconspng.com/uploads/youtube-logo-png-transparent-image-5.png" className='h-16 cursor-pointer' alt="" />
                 {/* searchbar */}
                 <div className="ml-10">
                     <input type="text" className=' border-[1px] border-gray-200 p-1 rounded-l-full w-[600px]' placeholder='   Search' />
