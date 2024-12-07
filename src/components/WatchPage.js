@@ -12,7 +12,7 @@ function WatchPage() {
     }, []);
     return (
         <div className="flex w-full overflow-y-auto">
-            <div id="watchpage-primary" className='w-[65%] border-2 border-red-200 p-2 px-8'>
+            <div id="watchpage-primary" className='w-[65%] border-2 border-red-200 p-2 pl-8'>
                 <WatchPage_PrimarySection />
             </div>
             <div id="watchpage-secondry" className='w-[35%] border-2 border-red-200'>
