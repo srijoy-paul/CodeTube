@@ -3,6 +3,7 @@ import { YOUTUBE_VIDEO_DATA_API, YOUTUBE_CHANNEL_DATA_API } from '../utils/const
 import { useSearchParams } from 'react-router-dom';
 import VideoPlayer from './VideoPlayer';
 import VideoInfoSection from './VideoInfoSection';
+import VideoComments from './VideoComments';
 function WatchPage_PrimarySection() {
     const [searchParams] = useSearchParams();
     const [playingVideo, setPlayingVideo] = useState();
@@ -30,7 +31,10 @@ function WatchPage_PrimarySection() {
             <div id="video-info" className='w-full border-2 border-green-200'>
                 <VideoInfoSection playingVideo={playingVideo} currentChannel={currentChannel} />
             </div>
-            <div id="video-comments" className='w-full'>Comments</div>
+            <div id="video-comments" className='w-full'>
+                <h1 className="font-bold text-xl">Comments</h1>
+                <VideoComments />
+            </div>
         </>
     )
 }
