@@ -15,8 +15,8 @@ function WatchPage() {
             <div id="watchpage-primary" className='w-[65%] border-2 border-red-200 p-2 pl-8'>
                 <WatchPage_PrimarySection />
             </div>
-            <div id="watchpage-secondry" className='w-[35%] border-2 border-red-200'>
-                <WatchPage_SecondrySection />
+            <div id="watchpage-secondry" className='w-[35%] border-2 border-red-200 flex flex-col p-2 pr-10 pl-4'>
+                <WatchPage_SecondrySection isLive={true} />
             </div>
         </div>
     )

@@ -1,9 +1,11 @@
 import React from 'react'
+import LiveChat from './LiveChat'
 
-function WatchPage_SecondrySection() {
+function WatchPage_SecondrySection({ isLive }) {
     return (
         <>
-            video suggestions
+            {isLive ? <LiveChat /> : ""}
+            <div>Suggested Videos</div>
         </>
     )
 }
