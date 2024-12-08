@@ -4,6 +4,37 @@ import { useSearchParams } from 'react-router-dom';
 import VideoPlayer from './VideoPlayer';
 import VideoInfoSection from './VideoInfoSection';
 import VideoComments from './VideoComments';
+
+const commentsData = [
+    {
+        name: "Srijoy Paul", comment: "Good video", replies: [
+            {
+                name: "Manashi Paul", comment: "Nice, Good video", replies: [
+                    { name: "Srijoy Paul", comment: "It is a good video", replies: [] },
+                    {
+                        name: "Priyanka Kumari", comment: "yes, It is a Good video", replies: [
+                            { name: "Srijoy Paul", comment: "It is a good video", replies: [] },
+                            { name: "Priyanka Kumari", comment: "yes, It is a Good video", replies: [] }
+                        ]
+                    }
+                ]
+            },
+            { name: "Priyanka Kumari", comment: "Good video", replies: [] }
+        ]
+    },
+    {
+        name: "Sujit Paul", comment: "Average video", replies: [
+            { name: "Srijoy Paul", comment: "It is a good video", replies: [] },
+            {
+                name: "Priyanka Kumari", comment: "yes, It is a Good video", replies: [
+                    { name: "Srijoy Paul", comment: "It is a good video", replies: [] },
+                    { name: "Priyanka Kumari", comment: "yes, It is a Good video", replies: [] }
+                ]
+            }
+        ]
+    },
+];
+
 function WatchPage_PrimarySection() {
     const [searchParams] = useSearchParams();
     const [playingVideo, setPlayingVideo] = useState();
@@ -28,12 +59,12 @@ function WatchPage_PrimarySection() {
             <div id="video-player" className='w-full relative'>
                 <VideoPlayer playingVideo={playingVideo} currentChannel={currentChannel} />
             </div>
-            <div id="video-info" className='w-full border-2 border-green-200'>
+            <div id="video-info" className='w-full flex flex-col gap-3'>
                 <VideoInfoSection playingVideo={playingVideo} currentChannel={currentChannel} />
             </div>
             <div id="video-comments" className='w-full'>
                 <h1 className="font-bold text-xl">Comments</h1>
-                <VideoComments />
+                <VideoComments commentsData={commentsData} />
             </div>
         </>
     )
